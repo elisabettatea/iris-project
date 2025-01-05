@@ -1,20 +1,20 @@
 # Iris Project 🌸
 
-Welcome to the Iris Project! This project is a part of the **Statistical Inference Methods** course (Politecnico di Milano, year 2022/2023), where we dive into the iconic *Iris dataset* to uncover insights using various statistical techniques. Along the way, you'll see data preprocessing, stunning visualizations, linear regression, logistic regression for classification, and how to evaluate our models. Let's get into the fun of analyzing data!
+Welcome to the Iris Project! ✨ This project is a part of the **Statistical Inference Methods** course (Politecnico di Milano, year 2022/2023), where we dive into the iconic *Iris dataset* to uncover insights using various statistical techniques. Along the way, you'll see data preprocessing, stunning visualizations, linear regression, logistic regression for classification, and how to evaluate our models. Let's get into the fun of analyzing data!
 
 ## Project Structure 📁
 
 Here’s how everything is organized in the project:
 
 
-- **/data/**: Contains the Iris dataset (`iris.csv`) and any other essential files needed for the project.
-- **/notebooks/**: This folder holds the following Jupyter notebooks :
+- `data`: Contains the Iris dataset (iris.data.txt) and any other essential files needed for the project.
+- `notebooks`: This folder holds the following Jupyter notebooks :
 
-- `01_data_preprocessing.ipynb`: Clean, transform, and prepare the data for analysis.
-- `02_visualization.ipynb`: Eye-catching visualizations to explore the data and reveal hidden patterns.
-- `03_linear_model.ipynb`: Build and assess a linear regression model for prediction.
-- `04_logistic_regression.ipynb`: Create a logistic regression model to classify species.
-- `05_prediction_analysis.ipynb`: Evaluate the performance of the models on test data.
+    - `01_data_preprocessing.ipynb`: Clean, transform, and prepare the data for analysis.
+    - `02_visualization.ipynb`: Eye-catching visualizations to explore the data and reveal hidden patterns.
+    - `03_linear_model.ipynb`: Build and assess a linear regression model for prediction.
+    - `04_logistic_regression.ipynb`: Create a logistic regression model to classify species.
+    - `05_prediction_analysis.ipynb`: Evaluate the performance of the models on test data.
 
 ## What You’ll Need 🔧
 
@@ -79,18 +79,6 @@ In this project, we’ll take a deep dive into the Iris dataset using the follow
 - **Logistic Regression**: Apply logistic regression for binary classification (Is it Iris-versicolor or not?).
 - **Model Evaluation**: Evaluate how well our models are doing using various statistical tests and performance metrics.
 
-## What’s Inside for You 🎁
-
-Here’s a quick overview of what you can expect to see in the project:
-
-- **Data Preprocessing**: How to clean and transform real-world data into something useful for analysis.
-- **Visualization**: Beautiful, insightful graphs that reveal patterns in the data.
-- **Linear Regression Model**: A simple, elegant approach to understand relationships between features and predict outcomes.
-- **Logistic Regression Model**: A binary classification model that focuses on distinguishing between two species of Iris.
-- **Model Evaluation**: How we evaluate and ensure the quality of our models with metrics like AIC, residual deviance, and more.
-
-Each notebook also includes concise explanations and commentary on the results, making it easy to follow along.
-
 ## Results 📊
 
 Here’s a sneak peek at the results:
@@ -102,6 +90,7 @@ Here’s a sneak peek at the results:
 ## Questions? 
 
 If you have any questions, feel free to reach out! You can contact me at:  
+
 ✉️ **elisabetta.tea@gmail.com**
 
-Happy coding and analyzing! 😄
+Happy coding and analyzing! ✨
