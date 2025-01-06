@@ -6,15 +6,33 @@ Welcome to the Iris Project! ✨ This project is a part of the **Statistical Inf
 
 Here’s how everything is organized in the project:
 
+- `data`: Contains the Iris dataset (iris.data.txt) and any other essential data files used in the analysis.
 
-- `data`: Contains the Iris dataset (iris.data.txt) and any other essential files needed for the project.
-- `notebooks`: This folder holds the following Jupyter notebooks :
+- `anaconda_projects`: This folder holds the following Jupyter notebooks:
 
     - `01_data_preprocessing.ipynb`: Clean, transform, and prepare the data for analysis.
     - `02_visualization.ipynb`: Eye-catching visualizations to explore the data and reveal hidden patterns.
     - `03_linear_model.ipynb`: Build and assess a linear regression model for prediction.
     - `04_logistic_regression.ipynb`: Create a logistic regression model to classify species.
     - `05_prediction_analysis.ipynb`: Evaluate the performance of the models on test data.
+
+- `results`:
+
+    - `plots`: Contains graphical representations and plots generated during the analysis, including:
+
+        - 02-class vs ...
+        - 03-qqplot-m5.png
+        - 03-residuals-m2.png
+        - 03-standardized residuals-m5.png
+        - 04-residuals-log.png
+        - 05-ROC.png
+        - 05-confusionmatrix.png
+
+        Additional plots like correlation matrix and pair plots.
+    - `tables`: Contains output files with results from the analysis, such as model summaries and statistical tests (e.g., Shapiro-Wilk test), saved in text format. Examples: m1.txt, m2.txt, m3.txt, ..., m8.txt.
+    
+- `README.md`: Provides an overview of the project, including its purpose, methodology, and how to run the analysis.
+
 
 ## What You’ll Need 🔧
 
