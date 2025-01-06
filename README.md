@@ -2,6 +2,8 @@
 
 Welcome to the Iris Project! ✨ This project is a part of the **Statistical Inference Methods** course (Politecnico di Milano, year 2022/2023), where we dive into the iconic *Iris dataset* to uncover insights using various statistical techniques. Along the way, you'll see data preprocessing, stunning visualizations, linear regression, logistic regression for classification, and how to evaluate our models. Let's get into the fun of analyzing data!
 
+![Iris Flower](iris-data-pic.jpg)
+
 ## Project Structure 📁
 
 Here’s how everything is organized in the project:
