@@ -1,0 +1,35 @@
+
+Call:
+lm(formula = class ~ . + sl * pl + sl * sw + sl * pw + pl * sw + 
+    pl * pw + sw * pw, data = iris.data[id_to_keep, ])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.39294 -0.08345  0.00182  0.07012  0.39567 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.391816   1.019102   4.309 3.25e-05 ***
+sl          -0.759441   0.245707  -3.091 0.002453 ** 
+sw          -1.042821   0.307347  -3.393 0.000922 ***
+pl           0.083382   0.342548   0.243 0.808076    
+pw           1.490784   0.771482   1.932 0.055541 .  
+sl:pl       -0.002264   0.035459  -0.064 0.949190    
+sl:sw        0.219537   0.067909   3.233 0.001562 ** 
+sl:pw       -0.021470   0.101955  -0.211 0.833555    
+sw:pl        0.014228   0.086222   0.165 0.869197    
+pl:pw        0.137373   0.033514   4.099 7.35e-05 ***
+sw:pw       -0.432271   0.187680  -2.303 0.022891 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1458 on 127 degrees of freedom
+Multiple R-squared:  0.9701,	Adjusted R-squared:  0.9678 
+F-statistic: 412.6 on 10 and 127 DF,  p-value: < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  residuals(m5)
+W = 0.98322, p-value = 0.08855
+
