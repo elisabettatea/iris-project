@@ -1,0 +1,23 @@
+
+Call:
+glm(formula = class_binaria ~ sl + sw + pl + pw, family = "binomial", 
+    data = iris.datalog)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)  
+(Intercept)   42.638     25.707   1.659   0.0972 .
+sl             2.465      2.394   1.030   0.3032  
+sw             6.681      4.480   1.491   0.1359  
+pl            -9.429      4.737  -1.991   0.0465 *
+pw           -18.286      9.743  -1.877   0.0605 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 138.629  on 99  degrees of freedom
+Residual deviance:  11.899  on 95  degrees of freedom
+AIC: 21.899
+
+Number of Fisher Scoring iterations: 10
+
