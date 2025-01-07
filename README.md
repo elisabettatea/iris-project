@@ -392,7 +392,7 @@ The Analysis of Deviance results indicate that removing the sl (sepal length) va
 
 #### GOF
 
-We perform a GOF (Goodness of Fit) test on the second model. The result of the Hoslem-test returned a p-value of 0.9995, indicating that model2 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
+We perform a GOF (Goodness of Fit) test on the second model. The result of the Hoslem-test returned a p-value of 0.984, indicating that model2 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
 
 #### Residuals
 
