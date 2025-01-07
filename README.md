@@ -378,24 +378,25 @@ Conclusion: Model 2 should be preferred over Model 1 because it is more parsimon
 We use the ANOVA function to compare the two models (model2 vs. model) and check if removing sl led to a significant improvement.
 
 ```
-Model 1: class_binaria ~ sw + pl + pw
-Model 2: class_binaria ~ sl + sw + pl + pw
+Model 1 (model) : class_binaria ~ sl + sw + pl + pw
+Model 2 (model2): class_binaria ~ sw + pl + pw
   Resid. Df Resid. Dev Df Deviance Pr(>Chi)
-1        96     13.266                     
-2        95     11.899  1   1.3673   0.2423
+1        95     11.899                     
+2        96     13.266 -1  -1.3673   0.2423
+
 
 ```
 
-The ANOVA results show that adding the sl (sepal length) variable to Model 2 doesn't really improve the model in a meaningful way. The p-value of 0.2423 suggests that the change in fit is not significant enough to justify adding sl. So, Model 1 (class_binaria ~ sw + pl + pw) is just as good as Model 2 (class_binaria ~ sl + sw + pl + pw) but simpler.
+The Analysis of Deviance results indicate that removing the sl (sepal length) variable from the first model does not significantly worsen the model. The p-value of 0.2423 suggests that the change in deviance is not substantial enough to justify keeping sl in the model. Therefore, model2 (class_binaria ~ sw + pl + pw) is just as effective as the first one (class_binaria ~ sl + sw + pl + pw) while being simpler and more parsimonious.
 
 
 #### GOF
 
-We perform a GOF (Goodness of Fit) test on the first model. The result of the Hoslem-test returned a p-value of 0.9995, indicating that Model 1 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
+We perform a GOF (Goodness of Fit) test on the second model. The result of the Hoslem-test returned a p-value of 0.9995, indicating that model2 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
 
 #### Residuals
 
-Finally, we analyze the residuals of Model 1 to assess if there are any patterns that could indicate problems with the model.
+Finally, we analyze the residuals of model2 to assess if there are any patterns that could indicate problems with the model.
 
 <img src="./results/plots/04-residuals-log.png" width="300" > 
 
