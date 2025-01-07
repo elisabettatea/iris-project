@@ -22,15 +22,12 @@ Here’s how everything is organized in the project:
 
     - `plots`: Contains graphical representations and plots generated during the analysis, including:
 
-        - 02-class vs ...
-        - 03-qqplot-m5.png
-        - 03-residuals-m2.png
-        - 03-standardized residuals-m5.png
-        - 04-residuals-log.png
-        - 05-ROC.png
-        - 05-confusionmatrix.png
+        - `Boxplots, pair plots, and ggpairs`: To explore the structure of the dataset and examine the relationships between variables.
+        - `Correlation plots`: To better understand the strength and direction of relationships among variables.
+        - `QQ plots`: To assess the normality of residuals in various models.
+        - `Confusion matrix heatmaps`: Providing a detailed visualization of classification performance, including true positives, true negatives, false positives, and false negatives.
+        - `ROC curve`: Illustrating the trade-off between sensitivity and specificity, aiding in the selection of an optimal classification threshold.
 
-        Additional plots like correlation matrix and pair plots.
     - `tables`: Contains output files with results from the analysis, such as model summaries and statistical tests (e.g., Shapiro-Wilk test), saved in text format. Examples: m1.txt, m2.txt, m3.txt, ..., m8.txt.
     
 - `README.md`: Provides an overview of the project, including its purpose, methodology, and how to run the analysis.
