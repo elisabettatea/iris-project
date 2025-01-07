@@ -228,7 +228,7 @@ Model summary and Shapiro-Wilk test results are saved to m3.txt, m4.txt, m.5.txt
 
 Here, a summary:
 
-|     | R2 | p-value |
+|     | R2 | p-value (SW test) |
 |----------|----------|----------|
 | m3 | 0.9466  | 0.0002334 |
 | m4 | 0.9511  | 9.218e-05 |
