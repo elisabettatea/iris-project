@@ -148,9 +148,9 @@ To better understand the dataset, several visualizations were created:
 
 ### 03-Linear Model
 
-    The modeling process progressed through several stages of refinement. Initially, a simple linear model was built, and then interaction terms were added to capture more complex relationships. Outliers and influential points were systematically removed based on leverage, Cook’s distance, and standardized and studentized residuals. Afterward, covariate selection methods such as stepwise regression were used to optimize the model, and a manual adjustment was made to finalize the model.
+The modeling process progressed through several stages of refinement. Initially, a simple linear model was built, and then interaction terms were added to capture more complex relationships. Outliers and influential points were systematically removed based on leverage, Cook’s distance, and standardized and studentized residuals. Afterward, covariate selection methods such as stepwise regression were used to optimize the model, and a manual adjustment was made to finalize the model.
 
-    Through these steps, the model improved progressively from R2= 0.9285 to R2=0.959, demonstrating a more accurate and robust fit. The final model is considered a very good fit for predicting the class variable based on the other measurements in the iris.data dataset.
+Through these steps, the model improved progressively from R2= 0.9285 to R2=0.959, demonstrating a more accurate and robust fit. The final model is considered a very good fit for predicting the class variable based on the other measurements in the iris.data dataset.
 
 #### Linear Model 1: Initial Linear Regression (m1)
 
