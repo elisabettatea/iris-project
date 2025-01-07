@@ -128,7 +128,7 @@ To better understand the dataset, several visualizations were created:
 
 | Correlation  (colours)                            | Correlation (numeric)                             |
 | --------------------------------------------------| --------------------------------------------------| 
-| ![Corr-col](./results/plots/02-corrplot-col.png) | ![Corr-num](./results/plots/02-corrplot-num.png) | 
+| <img src="./results/plots/02-corrplot-col.png" width="300" > | <img src="./results/plots/02-corrplot-num.png" width="300" >  | 
 
 - **Boxplots and Pair Plots**: The boxplot.png and 02-pairs.png visualizations were used to check for outliers and to visually inspect the relationships between different features.
 
