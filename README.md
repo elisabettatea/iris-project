@@ -12,11 +12,12 @@ Here’s how everything is organized in the project:
 
 - `anaconda_projects`: This folder holds the following Jupyter notebooks:
 
-    - `01_data_preprocessing.ipynb`: Clean, transform, and prepare the data for analysis.
-    - `02_visualization.ipynb`: Eye-catching visualizations to explore the data and reveal hidden patterns.
-    - `03_linear_model.ipynb`: Build and assess a linear regression model for prediction.
-    - `04_logistic_regression.ipynb`: Create a logistic regression model to classify species.
-    - `05_prediction_analysis.ipynb`: Evaluate the performance of the models on test data.
+    - **`01_data_preprocessing.ipynb`**: Clean, transform, and prepare the dataset.
+    - **`02_visualization.ipynb`**: Visualize the dataset and explore relationships between features.
+    - **`03_linear_model.ipynb`**: Build a linear regression model to predict based on the data.
+    - **`04_logistic_regression.ipynb`**: Perform binary classification using logistic regression (guess who the Iris-versicolor
+    is!).
+    - **`05_prediction_analysis.ipynb`**: Evaluate how well our model performs on test data.
 
 - `results`:
 
@@ -76,15 +77,6 @@ jupyter notebook
 
 This will open the Jupyter Notebook interface in your browser, and you're ready to explore the data and models!
 
-## How to Use the Notebooks 📝
-
-Each notebook is packed with short explanations of the code and the results. To make sure things run smoothly, follow this order:
-
-1. **`01_data_preprocessing.ipynb`**: Clean, transform, and prepare the dataset.
-2. **`02_visualization.ipynb`**: Visualize the dataset and explore relationships between features.
-3. **`03_linear_model.ipynb`**: Build a linear regression model to predict based on the data.
-4. **`04_logistic_regression.ipynb`**: Perform binary classification using logistic regression (guess who the Iris-versicolor is!).
-5. **`05_prediction_analysis.ipynb`**: Evaluate how well our model performs on test data.
 
 ## What You’ll Learn 💡
 
