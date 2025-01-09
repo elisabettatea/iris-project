@@ -2,7 +2,11 @@
 
 Welcome to the Iris Project! ✨ This project is a part of the **Statistical Inference Methods** course (Politecnico di Milano, year 2022/2023), where we dive into the iconic *Iris dataset* to uncover insights using various statistical techniques. Along the way, you'll see data preprocessing, stunning visualizations, linear regression, logistic regression for classification, and how to evaluate our models. Let's get into the fun of analyzing data!
 
+<div align="center">
+
 ![Iris Flower](iris-data-pic.png)
+
+</div>
 
 ## Project Structure 📁
 
@@ -126,25 +130,33 @@ To better understand the dataset, several visualizations were created:
 
 - **Correlation Plots**: The 02-corrplot-num.png and 02-corrplot-col.png files show how features relate to each other, helping us understand multicollinearity and which features might be useful for modeling.
 
+<div align="center">
+
 | Correlation  (colours)                            | Correlation (numeric)                             |
 | --------------------------------------------------| --------------------------------------------------| 
 | <img src="./results/plots/02-corrplot-col.png" width="300" > | <img src="./results/plots/02-corrplot-num.png" width="300" >  | 
 
+</div>
+
 - **Boxplots and Pair Plots**: The boxplot.png and 02-pairs.png visualizations were used to check for outliers and to visually inspect the relationships between different features.
 
+<div align="center">
 
 | Pairs                                             | GGpairs                                         | Boxplot                          | 
 | --------------------------------------------------| ------------------------------------------------|--------------------------------------------| 
 | ![Pairs](./results/plots/02-pairs.png)            | ![GGpairs](./results/plots/02-ggpairs.png  )     | ![CBoxplot](./results/plots/02-boxplot.png) | 
 
+</div>
 
 - **Class vs Features**: The 02-class vs plot helps visualize how the target class is distributed across different features, guiding feature selection for modeling.
 
+<div align="center">
 
 | Class vs petal lenght                                  |Class vs petal width                                   |Class vs sepal lenght                                  |Class vs sepal width                                  |
 | ------------------------------------------------------ | ------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------| 
 | ![Pairs](./results/plots/02-class-vs/class-vs-pl.png)  | ![Pairs](./results/plots/02-class-vs/class-vs-pw.png) | ![Pairs](./results/plots/02-class-vs/class-vs-sl.png) | ![Pairs](./results/plots/02-class-vs/class-vs-sw.png) |
 
+</div>
 
 ### 03-Linear Model
 
@@ -188,7 +200,11 @@ R2 increases to 0.9343, and the p-value decreases to 0.105, suggesting a better 
 
 A QQ plot is generated for the residuals (qqnorm(m2$residuals)) to visually check for normality. While the plot does not suggest severe issues, some outliers are apparent.
 
+
+<div align="center">
 <img src="./results/plots/03-qqplot-m2.png" width="300" > 
+</div>
+
 
 After this, we make some attempts to understand which technique suits the best for our analysis. We check:
 - Leverage points
@@ -216,7 +232,11 @@ The model (m5) is re-fitted, and the results show an improved fit with R2=0.9678
 
 A QQ plot is also generated for the residuals (qqnorm(m5$residuals)) to visually check for normality.
 
+
+<div align="center">
 <img src="./results/plots/03-qqplot-m5.png" width="300" > 
+</div>
+
 
 #### Linear Model 6: Removing Points with Studentized Residuals Greater than 2 (m6)
 
@@ -346,7 +366,6 @@ We proceed by refining the model by removing the predictors with higher p-values
 Here, we removed sl (sepal length) from the model because its p-value (0.3032) was not significant, making it a less useful predictor.
 
 ```
-
 Coefficients:
             Estimate Std. Error z value Pr(>|z|)  
 (Intercept)   50.527     23.995   2.106   0.0352 *
@@ -398,15 +417,50 @@ We perform a GOF (Goodness of Fit) test on the second model. The result of the H
 
 Finally, we analyze the residuals of model2 to assess if there are any patterns that could indicate problems with the model.
 
+<div align="center">
 <img src="./results/plots/04-residuals-log.png" width="300" > 
+</div>
 
 This plot helps us check if the residuals are randomly scattered around zero, which is a good indication that the model's assumptions hold. If there are patterns in the residuals, it might suggest that the model is missing important features or interactions.
 
 
 ### 05-Prediction Analysis
 
+The first step in this process is selecting a threshold to classify predictions as class 1 or class 0. Since the threshold is arbitrary, the idea is to choose one that minimizes the misclassification error. In this case, a threshold of 0.1 is selected to classify predicted probabilities into binary classes.
+
+A confusion matrix is generated to compare the predicted values (valori.predetti) with the actual values (valori.reali). This matrix is essential for evaluating the model’s performance.
+
+The confusion matrix summarizes correct (True Positive, True Negative) and incorrect (False Positive, False Negative) classification outcomes.
+
+The confusion matrix is visualized as a heatmap. This provides a clear visual representation of the actual versus predicted values, showing how many times each combination (TP, TN, FP, FN) occurs.
+
+<div align="center">
+<img src="./results/plots/05-confusionmatrix.png" width="300" > 
+</div>
 
 
+
+Various performance metrics are calculated based on the confusion matrix to evaluate the model’s performance:
+
+- Accuracy measures the overall correctness of the model.
+- Misclassification Rate indicates the error rate of the model.
+- Sensitivity measures how well the model identifies positive instances.
+- Specificity shows how well the model identifies negative instances.
+
+The threshold was chosen arbitrarily as 0.1, but the goal is to minimize the misclassification error. This can be done by experimenting with different thresholds and evaluating the performance metrics at each threshold. In this workflow, we stick with soglia = 0.1 because it provides satisfactory results.
+
+To further evaluate the model’s performance across different threshold values, an ROC (Receiver Operating Characteristic) curve is plotted. The ROC curve shows the trade-off between the true positive rate (sensitivity) and the false positive rate (1 - specificity) at various threshold values.
+
+<div align="center">
+<img src="./results/plots/05-ROC.png" width="300" > 
+</div>
+
+- ROC Curve: The plot visualizes the model’s performance across different thresholds. The closer the curve is to the top-left corner, the better the model.
+- AUC (Area Under the Curve): The area under the ROC curve is a measure of the model’s overall performance. A higher AUC indicates better performance.
+
+After evaluating the confusion matrix, performance metrics, and ROC curve, you observe that the ROC curve is almost optimal. The threshold of 0.1 seems to work well for the model, as it provides a good balance between sensitivity and specificity.
+
+Thus, based on this evaluation, the threshold of 0.1 can be considered appropriate for this model.
 
 
 ## Questions? 
