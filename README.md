@@ -86,17 +86,17 @@ This will open the Jupyter Notebook interface in your browser, and you're ready 
 
 In this project, we’ll take a deep dive into the Iris dataset using the following techniques:
 
-- **Data Preprocessing**: Clean up the dataset, handle missing values, and ensure the data is in the right shape for modeling.
+- **Data Preprocessing**: Explore the dataset's structure, verify its integrity, and ensure the data is ready for modeling without requiring additional cleaning or handling of missing values.
 - **Data Visualization**: Create beautiful visualizations (think scatter plots, pair plots) to uncover hidden patterns.
 - **Linear Regression**: Build a linear model to understand the relationship between the features and predict outcomes.
 - **Logistic Regression**: Apply logistic regression for binary classification (Is it a Versicolor or not?).
 - **Model Evaluation**: Evaluate how well our models performs on test data doing using various statistical tests and performance metrics.
 
-## Results 📊
+## Techniques & Results 📊
 
 ### 01-Data Preprocessing
 
-The first step in the analysis involved data preprocessing. The dataset structure was reviewed to understand its features, types, and relationships.
+The journey begins with diving into the raw dataset! The first step of our analysis was all about understanding the data—exploring its structure, features, and relationships to set the foundation for building powerful models. This crucial phase was like uncovering the blueprint for the insights that would follow!
 
 ```
 'data.frame':	150 obs. of  5 variables:
@@ -131,9 +131,10 @@ We also notice that the class variable is categorical. Later on, it will be conv
 
 To further understand the dataset, several visualizations were created:
 
-- **Correlation Plots**: The correlation plots suggest how features relate to each other, helping us understand multicollinearity and which features might be useful for modeling.
+- **Correlation Plots**: 
 
-Correlation values range from -1 to 1. A value of 1 indicates a perfect positive relationship, -1 indicates a perfect negative relationship, and 0 means no relationship.
+    The correlation plots suggest how features relate to each other, helping us understand multicollinearity and which features might be useful for modeling. 
+    Correlation values range from -1 to 1. A value of 1 indicates a perfect positive relationship, -1 indicates a perfect negative relationship, and 0 means no relationship.
 
 <div align="center">
 
@@ -146,9 +147,10 @@ Correlation values range from -1 to 1. A value of 1 indicates a perfect positive
 
 
 - **Boxplots and Pair Plots**: 
-- The `pairs` plot shows scatterplots for each pair of features, helping visualize relationships between Sepal and Petal dimensions. Diagonal histograms display individual feature distributions, while off-diagonal plots reveal correlations and separations between species
-- The `ggpairs` plot enhances the pairs plot by adding more details, including correlation coefficients and customized plots. It allows a deeper understanding of pairwise feature correlations, providing additional context for interpreting variable interactions across different Iris species.
-- The `boxplot` compares the distribution of the sepal and petal measurements across species. The minimum and maximum values (excluding outliers) are represented by the whiskers. The median (middle value) is the line inside the box. The upper and lower quartiles (Q1 and Q3) define the box edges. Outliers are points outside the whiskers. highlighting the median, range, and any outliers (). These visualizations are important for understanding the structure and separation of the data, which aids in model interpretation.
+
+    - The `pairs` plot shows scatterplots for each pair of features, helping visualize relationships between Sepal and Petal dimensions. Diagonal histograms display individual feature distributions, while off-diagonal plots reveal correlations and separations between species
+    - The `ggpairs` plot enhances the pairs plot by adding more details, including correlation coefficients and customized plots. It allows a deeper understanding of pairwise feature correlations, providing additional context for interpreting variable interactions across different Iris species.
+    - The `boxplot` compares the distribution of the sepal and petal measurements across species. The minimum and maximum values (excluding outliers) are represented by the whiskers. The median (middle value) is the line inside the box. The upper and lower quartiles (Q1 and Q3) define the box edges. Outliers are points outside the whiskers. highlighting the median, range, and any outliers (). These visualizations are important for understanding the structure and separation of the data, which aids in model interpretation.
 
 
 
@@ -158,7 +160,10 @@ Correlation values range from -1 to 1. A value of 1 indicates a perfect positive
 
 </div>
 
-- **Class vs Features**: These four plots display the relationship between the Iris species (class) and each feature (pl, pw, sl, sw). Each plot uses different colors and point shapes for species, helping visualize how each feature separates or overlaps the species categories.
+- **Class vs Features**: 
+    
+    These four plots display the relationship between the Iris species (class) and each feature (pl, pw, sl, sw). Each plot uses different colors and point shapes for species, helping visualize how each feature separates or overlaps the species categories.
+
 
 <div align="center">
 
@@ -172,12 +177,12 @@ Correlation values range from -1 to 1. A value of 1 indicates a perfect positive
 
 We started with an initial model to predict class based on all four variables. Then, we introduced interaction terms between some variables to explore more complex relationships. Next, we used four methods to improve the model by removing outliers and influential data points: leverage, Cook's distance, standardized residuals, and studentized residuals. We found that the best model was the one based on standardized residuals. Afterward, we applied advanced covariate selection techniques like stepwise regression to fine-tune the model, followed by a final round of manual adjustments to ensure an optimized and robust result.
 
-`💡` **IDEA**: To evaluate the model, we used two key metrics: (adjusted) R-squared and the p-value from the Shapiro-Wilk test on residuals. Adjusted R-squared shows how well the model explains the data, while the Shapiro-Wilk test checks if the residuals follow a normal distribution. These metrics ensure the model is both accurate and reliable. By focusing on these indicators, we can confirm the model's effectiveness in making predictions and its statistical validity. This approach also helps us ensure that the underlying assumptions of the model are met.
-
 <div align="center">
 <img src="./results/tables/linear-regression-scheme.png" width="400" > 
 </div>
 
+
+`💡` **IDEA**: To evaluate the model, we used two key metrics: (adjusted) R-squared and the p-value from the Shapiro-Wilk test on residuals. Adjusted R-squared shows how well the model explains the data, while the Shapiro-Wilk test checks if the residuals follow a normal distribution. These metrics ensure the model is both accurate and reliable. By focusing on these indicators, we can confirm the model's effectiveness in making predictions and its statistical validity. This approach also helps us ensure that the underlying assumptions of the model are met.
 
 Through these steps, the model improved progressively from R2 = 0.9285 to R2 = 0.9609, demonstrating a more accurate and robust fit. The final model is considered a very good fit for predicting the class variable based on the other measurements in the iris.data dataset.
 
