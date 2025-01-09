@@ -1,35 +1,31 @@
-
 Call:
 lm(formula = class ~ . + sl * pl + sl * sw + sl * pw + pl * sw + 
     pl * pw + sw * pw, data = iris.data[id_to_keep, ])
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--0.59818 -0.09662  0.00523  0.07013  0.57475 
+-0.59122 -0.09450  0.00592  0.06546  0.58213 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)   
-(Intercept)  4.34577    1.40468   3.094  0.00240 **
-sl          -0.77602    0.33566  -2.312  0.02229 * 
-sw          -0.95002    0.42572  -2.232  0.02729 * 
-pl          -0.03957    0.44096  -0.090  0.92862   
-pw           1.86356    0.98849   1.885  0.06154 . 
-sl:pl        0.03480    0.04755   0.732  0.46547   
-sl:sw        0.21120    0.09351   2.259  0.02551 * 
-sl:pw       -0.09666    0.13371  -0.723  0.47096   
-sw:pl       -0.01693    0.11157  -0.152  0.87964   
-pl:pw        0.13957    0.04337   3.218  0.00161 **
-sw:pw       -0.40984    0.24028  -1.706  0.09038 . 
+(Intercept)  5.78579    2.09196   2.766  0.00651 **
+sl          -1.03868    0.45991  -2.258  0.02558 * 
+sw          -1.38772    0.62276  -2.228  0.02758 * 
+pl          -0.04118    0.52246  -0.079  0.93730   
+pw           1.81691    1.14235   1.591  0.11415   
+sl:pl        0.04358    0.05143   0.847  0.39841   
+sl:sw        0.29290    0.13093   2.237  0.02698 * 
+sl:pw       -0.10722    0.14163  -0.757  0.45037   
+sw:pl       -0.03591    0.12999  -0.276  0.78281   
+pl:pw        0.14288    0.04510   3.168  0.00191 **
+sw:pw       -0.37807    0.26821  -1.410  0.16106   
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.189 on 135 degrees of freedom
-Multiple R-squared:  0.9503,	Adjusted R-squared:  0.9466 
-F-statistic: 257.9 on 10 and 135 DF,  p-value: < 2.2e-16
-
-
+Residual standard error: 0.1909 on 130 degrees of freedom
+Multiple R-squared:  0.9485,	Adjusted R-squared:  0.9445 
+F-statistic: 239.3 on 10 and 130 DF,  p-value: < 2.2e-16
 	Shapiro-Wilk normality test
 
 data:  residuals(m3)
-W = 0.95874, p-value = 0.0002334
-
+W = 0.95735, p-value = 0.0002322

@@ -6,4 +6,4 @@
  $ class     : chr  "Iris-setosa" "Iris-setosa" "Iris-setosa" "Iris-setosa" ...
 
 
- NAs = [1] 0
+ NAs = 0

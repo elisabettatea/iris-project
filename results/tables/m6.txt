@@ -1,35 +1,31 @@
-
 Call:
 lm(formula = class ~ . + sl * pl + sl * sw + sl * pw + pl * sw + 
     pl * pw + sw * pw, data = iris.data[id_to_keep, ])
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--0.60447 -0.10773  0.00183  0.09559  0.57225 
+-0.39264 -0.09239  0.00044  0.06016  0.39272 
 
 Coefficients:
-             Estimate Std. Error t value Pr(>|t|)   
-(Intercept)  4.428618   1.362396   3.251  0.00144 **
-sl          -0.788789   0.325405  -2.424  0.01663 * 
-sw          -1.126808   0.407614  -2.764  0.00648 **
-pl           0.231515   0.424994   0.545  0.58680   
-pw           1.362789   0.973996   1.399  0.16399   
-sl:pl       -0.005277   0.046612  -0.113  0.91003   
-sl:sw        0.240502   0.089374   2.691  0.00800 **
-sl:pw       -0.051621   0.135037  -0.382  0.70284   
-sw:pl       -0.018195   0.107095  -0.170  0.86534   
-pl:pw        0.137327   0.044971   3.054  0.00271 **
-sw:pw       -0.351705   0.239277  -1.470  0.14386   
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.006079   1.047968   3.823 0.000206 ***
+sl          -0.673684   0.251475  -2.679 0.008372 ** 
+sw          -0.943567   0.313339  -3.011 0.003144 ** 
+pl           0.116073   0.341727   0.340 0.734674    
+pw           1.310238   0.777780   1.685 0.094544 .  
+sl:pl       -0.008993   0.035595  -0.253 0.800949    
+sl:sw        0.197016   0.069321   2.842 0.005230 ** 
+sl:pw       -0.002555   0.102309  -0.025 0.980117    
+sw:pl        0.015924   0.085840   0.186 0.853133    
+pl:pw        0.135030   0.033401   4.043 9.14e-05 ***
+sw:pw       -0.408853   0.187512  -2.180 0.031085 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.1973 on 139 degrees of freedom
-Multiple R-squared:  0.9459,	Adjusted R-squared:  0.942 
-F-statistic:   243 on 10 and 139 DF,  p-value: < 2.2e-16
-
-
+Residual standard error: 0.1451 on 126 degrees of freedom
+Multiple R-squared:  0.9703,	Adjusted R-squared:  0.9679 
+F-statistic: 411.2 on 10 and 126 DF,  p-value: < 2.2e-16
 	Shapiro-Wilk normality test
 
 data:  residuals(m6)
-W = 0.96543, p-value = 0.0008003
-
+W = 0.97936, p-value = 0.03578

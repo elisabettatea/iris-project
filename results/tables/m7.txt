@@ -1,32 +1,28 @@
-
 Call:
 lm(formula = class ~ sl + sw + pl + pw + sl:sw + pl:pw + sw:pw, 
     data = iris.data[id_to_keep, ])
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--0.59621 -0.10589  0.00398  0.08804  0.57896 
+-0.39304 -0.09193  0.00073  0.06218  0.39214 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept)  4.80373    1.19325   4.026 9.20e-05 ***
-sl          -0.90098    0.23810  -3.784 0.000227 ***
-sw          -1.11696    0.39349  -2.839 0.005196 ** 
-pl           0.17909    0.05238   3.419 0.000820 ***
-pw           1.46012    0.29304   4.983 1.80e-06 ***
-sl:sw        0.24590    0.07739   3.178 0.001823 ** 
-pl:pw        0.10438    0.02125   4.912 2.45e-06 ***
-sw:pw       -0.43305    0.09133  -4.741 5.11e-06 ***
+(Intercept)  4.21752    0.92544   4.557 1.19e-05 ***
+sl          -0.74086    0.18681  -3.966 0.000121 ***
+sw          -0.94772    0.30198  -3.138 0.002106 ** 
+pl           0.12061    0.04140   2.913 0.004216 ** 
+pw           1.30114    0.22682   5.736 6.53e-08 ***
+sl:sw        0.20480    0.05979   3.425 0.000824 ***
+pl:pw        0.12355    0.01685   7.333 2.20e-11 ***
+sw:pw       -0.39044    0.07170  -5.446 2.51e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.1958 on 142 degrees of freedom
-Multiple R-squared:  0.9456,	Adjusted R-squared:  0.9429 
-F-statistic: 352.5 on 7 and 142 DF,  p-value: < 2.2e-16
-
-
+Residual standard error: 0.1436 on 129 degrees of freedom
+Multiple R-squared:  0.9702,	Adjusted R-squared:  0.9686 
+F-statistic: 600.3 on 7 and 129 DF,  p-value: < 2.2e-16
 	Shapiro-Wilk normality test
 
 data:  residuals(m7)
-W = 0.96695, p-value = 0.001132
-
+W = 0.98063, p-value = 0.04859
