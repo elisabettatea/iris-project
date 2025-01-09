@@ -184,7 +184,7 @@ We started with an initial model to predict class based on all four variables. T
 
 `💡` **IDEA**: To evaluate the model, we used two key metrics: (adjusted) R-squared and the p-value from the Shapiro-Wilk test on residuals. Adjusted R-squared shows how well the model explains the data, while the Shapiro-Wilk test checks if the residuals follow a normal distribution. These metrics ensure the model is both accurate and reliable. By focusing on these indicators, we can confirm the model's effectiveness in making predictions and its statistical validity. This approach also helps us ensure that the underlying assumptions of the model are met.
 
-Through these steps, the model improved progressively from R2 = 0.9285 to R2 = 0.9609, demonstrating a more accurate and robust fit. The final model is considered a very good fit for predicting the class variable based on the other measurements in the iris.data dataset.
+Through these steps, the model improved progressively from R<sup>2</sup> = 0.9285 to R<sup>2</sup> = 0.9609, demonstrating a more accurate and robust fit. The final model is considered a very good fit for predicting the class variable based on the other measurements in the iris.data dataset.
 
 #### Linear Model 1: Initial Linear Regression (m1)
 
@@ -212,13 +212,13 @@ W = 0.991, p-value = 0.4589
 
 ```
 
-The summary of the model (summary(m1)) provides coefficients and performance metrics, showing R2 = 0.9285. The Shapiro-Wilk test (shapiro.test(residuals(m1))) assesses the normality of residuals. With a p-value of 0.4589, the residuals appear to follow a normal distribution, supporting the assumptions of linear regression.
+The summary of the model (summary(m1)) provides coefficients and performance metrics, showing R<sup>2</sup> = 0.9285. The Shapiro-Wilk test (shapiro.test(residuals(m1))) assesses the normality of residuals. With a p-value of 0.4589, the residuals appear to follow a normal distribution, supporting the assumptions of linear regression.
 
 #### Linear Model 2: Adding Interaction Terms (m2)
 
 In this step, interaction terms (sl* sw and pl*pw) are included to explore potential relationships between predictors that might enhance the model's performance.
 
-R2 improves to 0.9343, and the p-value decreases to 0.105. While this indicates a better model fit, the improvement is not highly significant.
+R<sup>2</sup> improves to 0.9343, and the p-value decreases to 0.105. While this indicates a better model fit, the improvement is not highly significant.
 
 A QQ plot is generated for the residuals (qqnorm(m2$residuals)) to visually check for normality. While the plot does not suggest severe issues, some outliers are apparent.
 
@@ -252,7 +252,7 @@ The updated model (m4) is fitted, and residuals are checked to ensure the model 
 
 In this step, we remove points with standardized residuals greater than 2, which indicates large residuals relative to the standard deviation of the residuals.
 
-The model (m5) is fitted, and the results show an improved fit with R2=0.9678, but the p-value is still high at 0.08855.
+The model (m5) is fitted, and the results show an improved fit with R<sup>2</sup>=0.9678, but the p-value is still high at 0.08855.
 
 A QQ plot is also generated for the residuals (qqnorm(m5$residuals)) to visually check for normality.
 
@@ -272,7 +272,7 @@ Model summary and Shapiro-Wilk test results are saved to m3.txt, m4.txt, m.5.txt
 
 Here, a summary:
 
-|     | R2 | p-value (SW test) |
+|     | R<sup>2</sup> | p-value (SW test) |
 |----------|----------|----------|
 | m3 | 0.9445  | 0.0002322 |
 | m4 | 0.9576   | 0.0001245 |
@@ -280,7 +280,7 @@ Here, a summary:
 | m6 | 0.9679   | 0.03578|
 
 
-From the table above, model `m5` appears to be the best compromise. It achieves a high R2 value (0.9678), indicating excellent explanatory power, while also maintaining a reasonably high p-value in the Shapiro-Wilk test (0.08855), suggesting that residuals are sufficiently close to normality.
+From the table above, model `m5` appears to be the best compromise. It achieves a high R<sup>2</sup> value (0.9678), indicating excellent explanatory power, while also maintaining a reasonably high p-value in the Shapiro-Wilk test (0.08855), suggesting that residuals are sufficiently close to normality.
 
 
 #### Linear Model 7: Stepwise Covariate Selection (m7)
@@ -314,7 +314,7 @@ data:  residuals(m7)
 W = 0.98063, p-value = 0.04859
 ```
 
-This model outperforms earlier ones, such as Model 5, with a slightly higher R2 (0.9686) and statistical significance (p-value = 0.04859). Its advantage lies in explaining the data more effectively while using fewer predictors, making it more efficient and robust.
+This model outperforms earlier ones, such as Model 5, with a slightly higher R<sup>2</sup> (0.9686) and statistical significance (p-value = 0.04859). Its advantage lies in explaining the data more effectively while using fewer predictors, making it more efficient and robust.
 
 
 #### Linear Model 8: Model after Manual Covariate Removal (m8)
@@ -343,7 +343,7 @@ data:  residuals(m8)
 W = 0.98709, p-value = 0.2284
 ```
 
-This adjustment improved the normality of the residuals, though it led to a slight decrease in R2. Whether this small drop in R2 is acceptable for cleaner residuals is ultimately a subjective decision, depending on the priority you place on model fit versus residual behavior.
+This adjustment improved the normality of the residuals, though it led to a slight decrease in R<sup>2</sup>. Whether this small drop in R<sup>2</sup> is acceptable for cleaner residuals is ultimately a subjective decision, depending on the priority you place on model fit versus residual behavior.
 
 **RESULTS**: The journey from **m1** to **m8** was a process of constant refinement. Starting with a simple model, we explored interactions, tackled outliers, and fine-tuned covariates. Each step revealed deeper insights, ultimately leading to a more precise, balanced model—showing how small changes can significantly enhance performance and residuals.
 
