@@ -1,4 +1,4 @@
-# Iris Project 🌸
+# Iris Project 🌺
 
 Welcome to the Iris Project! ✨ This project is a part of the **Statistical Inference Methods** course (Politecnico di Milano, year 2022/2023), where we dive into the iconic ***Iris dataset*** to uncover insights using various statistical techniques. Along the way, you'll see data preprocessing, stunning visualizations, linear regression, logistic regression for classification, and how to evaluate our models. Let's get into the fun of analyzing data!
 
@@ -266,11 +266,13 @@ A QQ plot is also generated for the residuals (qqnorm(m5$residuals)) to visually
 
 These residuals are scaled by an estimate of their standard deviation. Points with studentized residuals greater than 2 are considered outliers and are removed.
 
-#### Comparing m3, m4, m5 , m6
+#### `💭` Comparing m3, m4, m5 , m6
 
 Model summary and Shapiro-Wilk test results are saved to m3.txt, m4.txt, m.5.txt, m6.txt.
 
 Here, a summary:
+
+<div align="center">
 
 |     | R<sup>2</sup> | p-value (SW test) |
 |----------|----------|----------|
@@ -279,6 +281,7 @@ Here, a summary:
 | m5 | 0.9678   | 0.08855 |
 | m6 | 0.9679   | 0.03578|
 
+</div>
 
 From the table above, model `m5` appears to be the best compromise. It achieves a high R<sup>2</sup> value (0.9678), indicating excellent explanatory power, while also maintaining a reasonably high p-value in the Shapiro-Wilk test (0.08855), suggesting that residuals are sufficiently close to normality.
 
@@ -345,7 +348,7 @@ W = 0.98709, p-value = 0.2284
 
 This adjustment improved the normality of the residuals, though it led to a slight decrease in R<sup>2</sup>. Whether this small drop in R<sup>2</sup> is acceptable for cleaner residuals is ultimately a subjective decision, depending on the priority you place on model fit versus residual behavior.
 
-**RESULTS**: The journey from **m1** to **m8** was a process of constant refinement. Starting with a simple model, we explored interactions, tackled outliers, and fine-tuned covariates. Each step revealed deeper insights, ultimately leading to a more precise, balanced model—showing how small changes can significantly enhance performance and residuals.
+✅ **`RESULTS`**: The journey from **m1** to **m8** was a process of constant refinement. Starting with a simple model, we explored interactions, tackled outliers, and fine-tuned covariates. Each step revealed deeper insights, ultimately leading to a more precise, balanced model—showing how small changes can significantly enhance performance and residuals.
 
 
 ### 04-Logistic Regression
@@ -426,8 +429,6 @@ Model 2 (model2): class_binaria ~ sw + pl + pw
   Resid. Df Resid. Dev Df Deviance Pr(>Chi)
 1        95     11.899                     
 2        96     13.266 -1  -1.3673   0.2423
-
-
 ```
 
 The Analysis of Deviance results indicate that removing the sl (sepal length) variable from the first model does not significantly worsen the model. The p-value of 0.2423 suggests that the change in deviance is not substantial enough to justify keeping sl in the model. Therefore, model2 (class_binaria ~ sw + pl + pw) is just as effective as the first one (class_binaria ~ sl + sw + pl + pw) while being simpler and more parsimonious.
@@ -436,7 +437,16 @@ This means we can make our predictions just as accurately without complicating t
 
 #### GOF
 
-We perform a GOF (Goodness of Fit) test on the second model. The result of the Hoslem-test returned a p-value of 0.984, indicating that model2 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
+We perform a GOF (Goodness of Fit) test on the second model.
+
+```
+Hosmer and Lemeshow goodness of fit (GOF) test
+
+data:  model2$y, fitted(model2)
+X-squared = 0.38054, df = 4, p-value = 0.984
+```
+
+The result of the Hoslem-test returned a p-value of 0.984, indicating that model2 fits the data very well. This p-value is much greater than 0.05, so we can conclude that the model does not have significant misfit issues.
 
 #### Residuals
 
@@ -445,6 +455,7 @@ Finally, we analyze the residuals of model2 to assess if there are any patterns 
 <div align="center">
 <img src="./results/plots/04-residuals-log.png" width="300" > 
 </div>
+
 
 From the graph, we can see that the residuals are mostly clustered around zero, which suggests that the model is generally fitting well. However, there are still a few outliers, indicating that some data points are not perfectly captured by the model.
 
@@ -463,7 +474,7 @@ This means that if the model predicts a probability greater than 0.1, we classif
 A confusion matrix is generated to compare the predicted values (valori.predetti) with the actual values (valori.reali). This matrix is essential for evaluating the model’s performance.
 
 <div align="center">
-<img src="./results/plots/05-confusionmatrix.png" width="300" > 
+<img src="./results/plots/05-confusionmatrix.png" width="400" > 
 </div>
 
 As you can see, the confusion matrix summarizes correct (True Positive, True Negative) and incorrect (False Positive, False Negative) classification outcomes.
@@ -476,8 +487,8 @@ Various performance metrics are calculated based on this confusion matrix, and t
 
 - **Accuracy**: measures the overall correctness of the model.
 - **Misclassification Rate**: indicates the error rate of the model.
-- **Sensitivity**: (true positive rate): measures how well the model identifies positive instances.
-- **Specificity**: (false positive rate): shows how well the model identifies negative instances.
+- **Sensitivity** (true positive rate): measures how well the model identifies positive instances.
+- **Specificity** (false positive rate): shows how well the model identifies negative instances.
 
 `❔` **QUESTION**: How do we know if the threeshold we set at 0.1 is actually the best one (the one which minimizes error)?
 
@@ -504,7 +515,7 @@ Overall, this threshold appears to be a solid choice for optimizing the model's 
 
 We've successfully navigated every step of this comprehensive analysis, from data preprocessing and model building to evaluation and predictive analysis! It's been an exciting journey, and we've explored a variety of techniques to better understand and predict the Iris dataset. I truly hope you found this process insightful and engaging, and that it sparked curiosity about the power of data analysis and machine learning!
 
-## Questions? 
+## Questions? 🤔
 
 If you have any questions, feel free to reach out! You can contact me at:  
 
